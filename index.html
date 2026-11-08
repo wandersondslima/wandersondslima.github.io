@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Francisco Wanderson | Economista & Analista de Dados</title>
+<meta name="description" content="Portfólio de Francisco Wanderson De Sousa Lima, economista e analista de dados especializado em finanças, controladoria e desenvolvimento regional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-alt: #f1f5f9;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --brand: #059669;
+  --brand-light: #ecfdf5;
+  --brand-dark: #047857;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 1.5rem; }
+
+h1, h2, h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header & Nav */
+header.top {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header.top .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.logo-container { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.logo-icon {
+  background: var(--brand);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+.logo-text b { display: block; color: var(--ink); font-size: 0.95rem; line-height: 1.2; }
+.logo-text span { color: var(--muted); font-size: 0.8rem; }
+
+nav { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; }
+nav a { text-decoration: none; color: var(--muted); font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+nav a:hover { color: var(--brand); }
+
+/* Hero */
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.hero-content { flex: 1; min-width: 300px; }
+.hero-content h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+.hero-content h1 span { color: var(--brand); }
+.hero-content p.lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.7; }
+.hero-image { display: flex; justify-content: center; flex-shrink: 0; }
+.profile-round-container {
+  width: 270px;
+  height: 270px;
+  background: linear-gradient(135deg, #059669 0%, #34d399 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(5, 150, 105, 0.2);
+}
+.profile-round-container img {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+}
+
+.btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+.btn.main { background: var(--brand); color: #fff; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25); }
+.btn.main:hover { background: var(--brand-dark); transform: translateY(-2px); }
+.btn.alt { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
+.btn.alt:hover { background: var(--surface-alt); border-color: var(--muted); }
+
+/* Sections */
+section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Sobre */
+.about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.8rem; }
+.card p { color: var(--muted); margin: 0 0 1rem; line-height: 1.7; }
+.card p:last-child { margin-bottom: 0; }
+.skills-tags { display: flex; flex-direction: column; gap: 0.75rem; }
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface-alt);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Logos */
+.tech-icons-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 2rem 2.5rem;
+  flex-wrap: wrap;
+}
+.tech-icon-item { display: flex; align-items: center; justify-content: center; transition: transform 0.2s; }
+.tech-icon-item:hover { transform: scale(1.1); }
+.tech-icon-item img { height: 52px; width: auto; object-fit: contain; }
+
+/* Linguagens */
+.lang-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.lang-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.badge {
+  background: var(--brand-light);
+  color: var(--brand-dark);
+  padding: 0.25rem 0.8rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+pre {
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 10px;
+  padding: 1.2rem;
+  overflow-x: auto;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.88rem;
+}
+
+/* Projetos (NOVO) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.6rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08); }
+.project-card h3 { margin: 0; font-size: 1.1rem; }
+.project-card p { margin: 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6; flex: 1; }
+.project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.project-link { font-weight: 600; font-size: 0.92rem; }
+
+/* Tabelas */
+.ledger { width: 100%; border-collapse: separate; border-spacing: 0 0.75rem; }
+.ledger tr { background: var(--surface); }
+.ledger td {
+  padding: 1.2rem 1.4rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.ledger td:first-child {
+  border-left: 1px solid var(--line);
+  border-radius: 12px 0 0 12px;
+  white-space: nowrap;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: 190px;
+}
+.ledger td:last-child {
+  border-right: 1px solid var(--line);
+  border-radius: 0 12px 12px 0; /* corrigido */
+}
+.ledger strong { color: var(--ink); font-size: 1.05rem; }
+.ledger small { display: block; color: var(--muted); margin-top: 0.3rem; }
+
+/* Contato */
+.contact-banner {
+  background: var(--brand-dark);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.contact-banner h2 { color: #ffffff; margin: 0 0 0.5rem; font-size: 1.6rem; }
+.contact-banner p { color: #a7f3d0; margin: 0; }
+.contact-banner .btn { background: #ffffff; color: var(--brand-dark); }
+.contact-banner .btn:hover { background: #ecfdf5; }
+
+footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: left; padding-top: 2.5rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .tech-icons-row { justify-content: space-around; gap: 1rem; padding: 1.5rem; }
+  .contact-banner { flex-direction: column; align-items: flex-start; }
+  .ledger td:first-child { width: auto; white-space: normal; }
+}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="logo-container" href="#inicio">
+    <div class="logo-icon">FW</div>
+    <div class="logo-text">
+      <b>Francisco Wanderson</b>
+      <span>Economista & Analista</span>
+    </div>
+  </a>
+  <nav aria-label="Seções">
+    <a href="#sobre">Sobre</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#linguagens">Linguagens</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#experiencia">Experiências</a>
+    <a href="#formacao">Formação</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</div></header>
+
+<main id="inicio"><div class="wrap">
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Economista que analisa dados com <span>SQL, Python e R</span>.</h1>
+      <p class="lead">Francisco Wanderson De Sousa Lima, de Crato, Ceará. Bacharel em Economia (URCA, 2025), com experiência em rotinas financeiras e interesse em controladoria, auditoria e análise de dados.</p>
+      <div class="btns">
+        <a class="btn main" href="mailto:wandersontumblr@gmail.com">Enviar e-mail</a>
+        <a class="btn alt" href="https://www.linkedin.com/in/franciscowandersondesousalima" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn alt" href="https://github.com/wandersondslima" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="profile-round-container">
+        <img src="perfil.jpg" alt="Francisco Wanderson">
+      </div>
+    </div>
+  </div>
+
+  <section id="sobre">
+    <h2>👤 Sobre Mim</h2>
+    <div class="about-grid">
+      <div class="card">
+        <p>Graduado em Ciências Econômicas pela Universidade Regional do Cariri (URCA), atuo na área administrativa e financeira, com foco em dados, políticas públicas e desenvolvimento regional.</p>
+        <p>Minha trajetória une pesquisas acadêmicas rigorosas, experiência profissional em conciliações e rotinas contábeis, e busca constante por inovação através de ferramentas analíticas.</p>
+      </div>
+      <div class="card">
+        <div class="skills-tags">
+          <div class="skill-row">📈 Economia</div>
+          <div class="skill-row">📊 Análise de Dados</div>
+          <div class="skill-row">💰 Gestão Financeira</div>
+          <div class="skill-row">🏛️ Políticas Públicas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2>🛠️ Habilidades Técnicas</h2>
+    <div class="tech-icons-row">
+      <div class="tech-icon-item">
+        <img src="Excel.jpg" alt="Excel">
+      </div>
+      <div class="tech-icon-item">
+        <img src="powerbi.png" alt="Power BI">
+      </div>
+      <div class="tech-icon-item">
+        <img src="Python.jpg" alt="Python">
+      </div>
+      <div class="tech-icon-item">
+        <img src="sql.png" alt="SQL">
+      </div>
+      <div class="tech-icon-item">
+        <img src="R.png" alt="R">
+      </div>
+    </div>
+  </section>
+
+  <section id="linguagens">
+    <h2>💻 Linguagens</h2>
+    <div class="lang-box">
+      <div class="lang-header">
+        <strong>R</strong>
+        <span class="badge">Análise estatística</span>
+      </div>
+      <pre><code>dados &lt;- read.csv("dados.csv")
+summary(dados)</code></pre>
+    </div>
+    <div class="lang-box">
+      <div class="lang-header">
+        <strong>Python</strong>
+        <span class="badge">Em andamento</span>
+      </div>
+      <pre><code>import pandas as pd
+
+df = pd.read_csv("dados.csv")
+print(df.describe())</code></pre>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2>🚀 Projetos</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-tags"><span class="badge">R</span></div>
+        <h3>Pesquisas acadêmicas em R</h3>
+        <p>Análises de dados desenvolvidas durante a graduação em Economia, com scripts em R e foco em desenvolvimento regional.</p>
+        <a class="project-link" href="https://github.com/wandersondslima" target="_blank" rel="noopener">Ver no GitHub →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-tags"><span class="badge">Economia</span></div>
+        <h3>Monografia</h3>
+        <p>Trabalho de conclusão do curso de Ciências Econômicas na URCA (2025).</p>
+        <a class="project-link" href="https://github.com/wandersondslima" target="_blank" rel="noopener">Ver no GitHub →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-tags"><span class="badge">Power BI</span><span class="badge">Python</span></div>
+        <h3>Em breve: dashboard de dados</h3>
+        <p>Projeto em desenvolvimento a partir dos cursos de Power BI e Python.</p>
+        <a class="project-link" href="https://github.com/wandersondslima" target="_blank" rel="noopener">Acompanhar →</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <h2>💼 Experiências</h2>
+    <table class="ledger">
+      <tr>
+        <td>jun/2026 – atual</td>
+        <td><strong>Auxiliar Administrativo de Obras</strong><small>Detex</small></td>
+      </tr>
+      <tr>
+        <td>jan/2025 – mar/2026</td>
+        <td><strong>Assistente Financeiro Júnior</strong><small>Bitribut Recuperação Tributária · rotinas financeiras e conciliações</small></td>
+      </tr>
+      <tr>
+        <td>2024</td>
+        <td><strong>Estágio Financeiro/Administrativo</strong><small>URCA</small></td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="formacao">
+    <h2>🎓 Formação</h2>
+    <table class="ledger">
+      <tr>
+        <td>2025</td>
+        <td><strong>Bacharelado em Ciências Econômicas</strong><small>Universidade Regional do Cariri (URCA)</small></td>
+      </tr>
+      <tr>
+        <td>Em andamento</td>
+        <td><strong>Cursos de Power BI e Python</strong><small>Análise de dados</small></td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="contato">
+    <div class="contact-banner">
+      <div>
+        <h2>Vamos conversar?</h2>
+        <p>Aberto a oportunidades em finanças, controladoria, auditoria e análise de dados.</p>
+      </div>
+      <a class="btn" href="mailto:wandersontumblr@gmail.com">Enviar e-mail</a>
+    </div>
+  </section>
+
+</div></main>
+
+<footer>
+  <div class="wrap">© 2026 Francisco Wanderson De Sousa Lima · Crato, Ceará</div>
+</footer>
+
+</body>
+</html>
